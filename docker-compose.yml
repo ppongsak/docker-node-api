@@ -1,0 +1,12 @@
+version: "3.1"
+services:
+  node-api:
+    image: node-express:3.0
+    container_name: node-api
+    restart: always
+    build: ../node-api
+    volumes:
+    - "../node-api:/src/app"
+    ports:
+      - "3031:3000"
+    command: /bin/sh -c "npm install && npm start"

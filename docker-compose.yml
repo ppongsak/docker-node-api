@@ -4,9 +4,8 @@ services:
     image: node-express:3.0
     container_name: node-api
     restart: always
-    build: ../node-api
     volumes:
-    - "../node-api:/src/app"
+    - "../node-api:/src"
     ports:
       - "3031:3000"
     command: /bin/sh -c "npm install && npm start"

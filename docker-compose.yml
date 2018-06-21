@@ -1,7 +1,7 @@
-version: "3.1"
+version: "2"
 services:
   node-api:
-    image: node-express:3.0
+    image: node-express:1.0
     container_name: node-api
     restart: always
     volumes:
